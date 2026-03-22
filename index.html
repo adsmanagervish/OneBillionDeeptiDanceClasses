@@ -1055,13 +1055,7 @@
   }
 
   function handleSubmit() {
-    const name = document.querySelector('input[placeholder="e.g. Ananya"]').value;
-    const phone = document.querySelector('input[placeholder="+91 98765 43210"]').value;
-    if (!name || !phone) {
-      alert("Please fill in your child's name and your WhatsApp number.");
-      return;
-    }
-    alert(`🎉 Thank you! We've received your registration.\nOur team will call you within 24 hours to confirm your FREE trial class.\n\nSee you on the dance floor! 💃`);
+    window.location.href = "thankyou.html";
   }
 </script>
 </body>
