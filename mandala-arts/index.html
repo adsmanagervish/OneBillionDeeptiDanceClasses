@@ -1,1 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mandala Art Summer Camp 2026 | Deepti Art Class, Jabalpur</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #E8B84B;
+    --deep: #1A0A2E;
+    --magenta: #C2185B;
+    --coral: #FF6B6B;
+    --cream: #FFF8F0;
+    --text: #2D1B4E;
+    --accent: #FF4081;
+  }
 
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--deep);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 40px 20px;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 50%, rgba(194,24,91,0.25) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 80% 30%, rgba(232,184,75,0.18) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 50% at 50% 80%, rgba(255,64,129,0.15) 0%, transparent 60%);
+  }
+
+  /* floating dance silhouettes */
+  .silhouette {
+    position: absolute;
+    opacity: 0.06;
+    font-size: 180px;
+    animation: float 6s ease-in-out infinite;
+    user-select: none;
+    pointer-events: none;
+  }
+  .sil-1 { top: 5%; left: 5%; animation-delay: 0s; }
+  .sil-2 { top: 20%; right: 8%; animation-delay: 2s; font-size: 120px; }
+  .sil-3 { bottom: 10%; left: 15%; animation-delay: 4s; font-size: 100px; }
+  .sil-4 { bottom: 20%; right: 5%; animation-delay: 1s; font-size: 150px; }
+
+  @keyframes float {
+    0%,100% { transform: translateY(0) rotate(-3deg); }
+    50%      { transform: translateY(-20px) rotate(3deg); }
+  }
+
+  /* spinning rings */
+  .ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(232,184,75,0.15);
+    animation: spin 20s linear infinite;
+  }
+  .ring-1 { width: 600px; height: 600px; top: -150px; left: -150px; }
+  .ring-2 { width: 400px; height: 400px; bottom: -100px; right: -100px; animation-duration: 15s; animation-direction: reverse; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold), #ffca6e);
+    color: var(--deep);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin-bottom: 24px;
+    animation: fadeDown 0.8s ease both;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 8vw, 96px);
+    font-weight: 900;
+    line-height: 1;
+    color: #fff;
+    animation: fadeDown 0.8s 0.2s ease both;
+  }
+
+  .hero-title span {
+    display: block;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--coral) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-style: italic;
+  }
+
+  .hero-sub {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(22px, 3vw, 32px);
+    color: rgba(255,255,255,0.7);
+    margin: 16px 0 36px;
+    animation: fadeDown 0.8s 0.4s ease both;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+    animation: fadeDown 0.8s 0.6s ease both;
+  }
+
+  .meta-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 40px;
+    font-weight: 500;
+  }
+
+  .meta-pill .icon { font-size: 16px; }
+
+  .cta-group {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    animation: fadeDown 0.8s 0.8s ease both;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--magenta), var(--accent));
+    color: #fff;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 30px rgba(194,24,91,0.4);
+    letter-spacing: 0.5px;
+  }
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 40px rgba(194,24,91,0.5);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.35);
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.6);
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* scroll indicator */
+  .scroll-hint {
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.4); font-size: 12px; letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: fadeDown 1s 1.2s ease both;
+  }
+  .scroll-dot {
+    width: 6px; height: 6px; background: var(--gold); border-radius: 50%;
+    animation: bounce 1.5s infinite;
+  }
+  @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+
+  /* ── STATS STRIP ── */
+  .stats-strip {
+    background: linear-gradient(135deg, var(--magenta), #8e1a4a);
+    padding: 28px 20px;
+  }
+  .stats-inner {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px; text-align: center;
+  }
+  .stat-item { color: #fff; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; font-weight: 900;
+    color: var(--gold); display: block;
+  }
+  .stat-label { font-size: 13px; opacity: 0.85; letter-spacing: 1px; text-transform: uppercase; }
+
+  /* ── SECTION GENERAL ── */
+  section { padding: 80px 20px; }
+  .section-label {
+    font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--magenta); font-weight: 600; margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 700; line-height: 1.15;
+    color: var(--deep);
+  }
+  .section-title em { font-style: italic; color: var(--magenta); }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; gap: 36px; }
+  }
+
+  .about-text p {
+    font-size: 16px; line-height: 1.8; color: #4a3660; margin-top: 20px;
+  }
+  .about-visual {
+    background: var(--deep);
+    border-radius: 24px;
+    padding: 40px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-visual::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 80% 20%, rgba(232,184,75,0.2), transparent 60%),
+                radial-gradient(ellipse at 20% 80%, rgba(194,24,91,0.3), transparent 60%);
+  }
+  .style-tags {
+    display: flex; flex-wrap: wrap; gap: 10px; position: relative; z-index: 1;
+  }
+  .style-tag {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff; font-size: 14px; font-weight: 500;
+    padding: 10px 18px; border-radius: 30px;
+    transition: all 0.2s;
+  }
+  .style-tag.gold { background: var(--gold); color: var(--deep); border-color: var(--gold); font-weight: 600; }
+  .about-visual .visu-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px; color: var(--gold);
+    margin-bottom: 20px; position: relative; z-index: 1;
+  }
+
+  /* ── SCHEDULE CARDS ── */
+  .schedule-section { background: var(--deep); }
+  .schedule-section .section-title { color: #fff; }
+  .schedule-section .section-label { color: var(--gold); }
+  .schedule-section p { color: rgba(255,255,255,0.65); font-size: 16px; margin-top: 12px; max-width: 520px; }
+
+  .schedule-header {
+    max-width: 1100px; margin: 0 auto 48px;
+    display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;
+  }
+
+  .cards-grid {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .camp-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px; padding: 28px;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .camp-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,0.09);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  }
+  .camp-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--magenta), var(--gold));
+    border-radius: 20px 20px 0 0;
+  }
+  .card-emoji { font-size: 36px; margin-bottom: 16px; display: block; }
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; color: #fff; font-weight: 700; margin-bottom: 8px;
+  }
+  .card-age {
+    display: inline-block;
+    background: rgba(232,184,75,0.15); border: 1px solid rgba(232,184,75,0.3);
+    color: var(--gold); font-size: 12px; font-weight: 600;
+    padding: 4px 12px; border-radius: 20px; margin-bottom: 14px;
+    letter-spacing: 1px; text-transform: uppercase;
+  }
+  .card-desc { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.6; }
+
+  /* ── TIMELINE / HOW IT WORKS ── */
+  .timeline-section {
+    background: #f9f0ff;
+  }
+  .timeline-wrap { max-width: 800px; margin: 48px auto 0; }
+  .tl-step {
+    display: flex; gap: 24px; margin-bottom: 36px; align-items: flex-start;
+  }
+  .tl-num {
+    flex-shrink: 0;
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, var(--magenta), var(--accent));
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 900;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 20px rgba(194,24,91,0.35);
+  }
+  .tl-body h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-weight: 700; margin-bottom: 6px; color: var(--deep);
+  }
+  .tl-body p { font-size: 15px; line-height: 1.7; color: #5a4070; }
+
+  /* ── FEATURES ── */
+  .features-grid {
+    max-width: 1100px; margin: 48px auto 0;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 28px;
+  }
+  .feat-box {
+    background: #fff;
+    border-radius: 16px; padding: 28px 24px;
+    border: 1px solid rgba(194,24,91,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .feat-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(194,24,91,0.12);
+  }
+  .feat-icon { font-size: 32px; margin-bottom: 14px; display: block; }
+  .feat-title { font-weight: 700; font-size: 16px; color: var(--deep); margin-bottom: 8px; }
+  .feat-desc { font-size: 14px; line-height: 1.6; color: #6b5280; }
+
+  /* ── PRICING ── */
+  .pricing-section { background: var(--cream); }
+  .pricing-grid {
+    max-width: 900px; margin: 48px auto 0;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+  }
+  .price-card {
+    border-radius: 24px; padding: 36px 32px;
+    border: 2px solid transparent;
+    transition: transform 0.3s;
+    position: relative;
+  }
+  .price-card:hover { transform: translateY(-4px); }
+  .price-card.standard {
+    background: #fff;
+    border-color: rgba(194,24,91,0.2);
+  }
+  .price-card.featured {
+    background: var(--deep);
+    border-color: var(--gold);
+  }
+  .featured-badge {
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: var(--gold); color: var(--deep);
+    font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 6px 18px; border-radius: 20px;
+  }
+  .price-name {
+    font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 16px;
+  }
+  .price-card.standard .price-name { color: var(--magenta); }
+  .price-card.featured .price-name { color: var(--gold); }
+  .price-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px; font-weight: 900; line-height: 1;
+    margin-bottom: 4px;
+  }
+  .price-card.standard .price-amount { color: var(--deep); }
+  .price-card.featured .price-amount { color: #fff; }
+  .price-period { font-size: 13px; color: #888; margin-bottom: 24px; }
+  .price-card.featured .price-period { color: rgba(255,255,255,0.5); }
+  .price-features { list-style: none; margin-bottom: 28px; }
+  .price-features li {
+    padding: 9px 0; border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 14px; display: flex; align-items: center; gap: 10px;
+  }
+  .price-card.featured .price-features li { border-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.85); }
+  .check { color: var(--magenta); font-size: 16px; }
+  .price-card.featured .check { color: var(--gold); }
+  .price-cta {
+    display: block; text-align: center;
+    padding: 14px; border-radius: 40px;
+    font-weight: 600; font-size: 15px;
+    text-decoration: none; cursor: pointer; border: none;
+    transition: all 0.2s;
+  }
+  .price-card.standard .price-cta {
+    background: transparent;
+    border: 2px solid var(--magenta);
+    color: var(--magenta);
+  }
+  .price-card.standard .price-cta:hover { background: var(--magenta); color: #fff; }
+  .price-card.featured .price-cta {
+    background: linear-gradient(135deg, var(--gold), #ffca6e);
+    color: var(--deep);
+    box-shadow: 0 6px 20px rgba(232,184,75,0.35);
+  }
+  .price-card.featured .price-cta:hover { box-shadow: 0 10px 28px rgba(232,184,75,0.5); }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section { background: #fff5fb; }
+  .testi-grid {
+    max-width: 1000px; margin: 48px auto 0;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .testi-card {
+    background: #fff;
+    border-radius: 20px; padding: 28px;
+    border: 1px solid rgba(194,24,91,0.1);
+    box-shadow: 0 4px 20px rgba(194,24,91,0.06);
+  }
+  .testi-stars { color: var(--gold); font-size: 18px; margin-bottom: 14px; letter-spacing: 2px; }
+  .testi-text { font-size: 15px; line-height: 1.7; color: #4a3660; font-style: italic; margin-bottom: 20px; }
+  .testi-author { display: flex; align-items: center; gap: 12px; }
+  .testi-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--magenta), var(--accent));
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 700; font-size: 16px;
+    flex-shrink: 0;
+  }
+  .testi-name { font-weight: 700; font-size: 14px; color: var(--deep); }
+  .testi-role { font-size: 12px; color: #888; }
+
+  /* ── REGISTER FORM ── */
+  .register-section { background: var(--deep); position: relative; overflow: hidden; }
+  .register-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 50%, rgba(194,24,91,0.2), transparent 60%),
+      radial-gradient(ellipse at 70% 50%, rgba(232,184,75,0.15), transparent 55%);
+  }
+  .register-inner {
+    max-width: 640px; margin: 0 auto;
+    position: relative; z-index: 1; text-align: center;
+  }
+  .register-section .section-title { color: #fff; }
+  .register-section .section-label { color: var(--gold); }
+  .register-section > .register-inner > p {
+    color: rgba(255,255,255,0.65); font-size: 16px; margin: 16px 0 40px;
+  }
+
+  .form-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(20px);
+    border-radius: 28px; padding: 40px 36px;
+    text-align: left;
+  }
+
+  @media (max-width: 480px) { .form-card { padding: 28px 20px; } }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+
+  .form-group { margin-bottom: 18px; }
+  .form-group label {
+    display: block; font-size: 12px; font-weight: 600;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: rgba(255,255,255,0.6); margin-bottom: 8px;
+  }
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #fff; font-size: 15px;
+    padding: 14px 18px; border-radius: 12px;
+    outline: none; transition: border 0.2s, background 0.2s;
+    font-family: 'DM Sans', sans-serif;
+    appearance: none;
+  }
+  .form-group input::placeholder { color: rgba(255,255,255,0.3); }
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: var(--gold);
+    background: rgba(255,255,255,0.12);
+  }
+  .form-group select option { background: var(--deep); color: #fff; }
+
+  .form-submit {
+    width: 100%; margin-top: 8px;
+    background: linear-gradient(135deg, var(--magenta), var(--accent));
+    color: #fff; border: none;
+    padding: 18px; border-radius: 14px;
+    font-size: 16px; font-weight: 700;
+    cursor: pointer; letter-spacing: 0.5px;
+    box-shadow: 0 8px 28px rgba(194,24,91,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(194,24,91,0.5);
+  }
+
+  .form-note {
+    text-align: center; margin-top: 16px;
+    font-size: 13px; color: rgba(255,255,255,0.4);
+  }
+
+  /* ── FAQ ── */
+  .faq-section { background: var(--cream); }
+  .faq-wrap { max-width: 760px; margin: 48px auto 0; }
+  .faq-item {
+    border-bottom: 1px solid rgba(194,24,91,0.12);
+    padding: 20px 0; cursor: pointer;
+  }
+  .faq-q {
+    display: flex; justify-content: space-between; align-items: center;
+    font-weight: 600; font-size: 16px; color: var(--deep);
+  }
+  .faq-icon {
+    width: 28px; height: 28px;
+    background: var(--magenta); color: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0; transition: transform 0.3s;
+  }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-a {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    font-size: 15px; color: #6b5280; line-height: 1.7;
+  }
+  .faq-item.open .faq-a { max-height: 200px; padding-top: 14px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #120820;
+    padding: 60px 20px 30px;
+    color: rgba(255,255,255,0.5);
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  @media (max-width: 768px) { .footer-inner { grid-template-columns: 1fr; } }
+  .footer-brand .f-logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px; color: var(--gold); margin-bottom: 12px;
+  }
+  .footer-brand p { font-size: 14px; line-height: 1.7; max-width: 280px; }
+  .footer-col h5 {
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    color: #fff; font-weight: 700; margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a { color: rgba(255,255,255,0.5); font-size: 14px; text-decoration: none; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1100px; margin: 24px auto 0;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    font-size: 13px;
+  }
+  .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+  /* ── STICKY CTA BAR (mobile) ── */
+  .sticky-bar {
+    display: none;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+    background: var(--deep);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 14px 20px;
+    align-items: center; justify-content: space-between; gap: 12px;
+  }
+  @media (max-width: 600px) { .sticky-bar { display: flex; } }
+  .sticky-bar .s-text { color: #fff; font-size: 13px; font-weight: 500; }
+  .sticky-bar .s-text span { color: var(--gold); font-weight: 700; }
+  .sticky-bar .s-btn {
+    background: linear-gradient(135deg, var(--magenta), var(--accent));
+    color: #fff; border: none;
+    padding: 12px 22px; border-radius: 30px;
+    font-size: 13px; font-weight: 700; cursor: pointer;
+    white-space: nowrap; flex-shrink: 0;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* ── GENERAL UTIL ── */
+  .text-center { text-align: center; }
+  .max-center { max-width: 1100px; margin: 0 auto; }
+
+  /* ══════════════════════════════════
+     RESPONSIVE — ALL DEVICES
+  ══════════════════════════════════ */
+
+  /* ── TABLET (max 1024px) ── */
+  @media (max-width: 1024px) {
+    .hero-title { font-size: clamp(36px, 6vw, 72px); white-space: normal !important; }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ── TABLET PORTRAIT (max 768px) ── */
+  @media (max-width: 768px) {
+    section { padding: 60px 20px; }
+
+    /* Hero */
+    .hero { padding: 60px 20px 80px; }
+    .hero-content { max-width: 100%; }
+    .hero-title { font-size: clamp(30px, 7vw, 56px); white-space: normal !important; }
+    .hero-sub { font-size: clamp(18px, 4vw, 26px); }
+    .hero-meta { gap: 12px; }
+    .meta-pill { font-size: 13px; padding: 8px 14px; }
+    .btn-primary, .btn-secondary { padding: 15px 28px; font-size: 15px; }
+
+    /* Stats */
+    .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+    /* About */
+    .about-grid { grid-template-columns: 1fr; gap: 36px; }
+
+    /* Features */
+    .features-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+    /* Instructor */
+    .instructor-flex { flex-direction: column !important; align-items: center !important; text-align: center; gap: 32px !important; }
+
+    /* Testimonials */
+    .testi-grid { grid-template-columns: 1fr; }
+
+    /* Footer */
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    .footer-brand p { max-width: 100%; }
+  }
+
+  /* ── MOBILE (max 480px) ── */
+  @media (max-width: 480px) {
+    section { padding: 50px 16px; }
+
+    /* Hero */
+    .hero { padding: 50px 16px 80px; min-height: auto; }
+    .hero-title { font-size: clamp(26px, 8vw, 42px); white-space: normal !important; line-height: 1.15; }
+    .hero-sub { font-size: 18px; }
+    .badge { font-size: 11px; letter-spacing: 1.5px; padding: 7px 14px; }
+    .hero-meta { gap: 8px; }
+    .meta-pill { font-size: 12px; padding: 7px 12px; }
+    .cta-group { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-secondary { width: 100%; text-align: center; padding: 15px 20px; font-size: 15px; }
+
+    /* Stats */
+    .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .stat-num { font-size: 28px; }
+    .stat-label { font-size: 11px; }
+
+    /* About */
+    .about-text p { font-size: 15px; }
+    .style-tags { gap: 8px; }
+    .style-tag { font-size: 13px; padding: 8px 14px; }
+
+    /* Features */
+    .features-grid { grid-template-columns: 1fr; }
+    .feat-box { padding: 20px; }
+
+    /* Pricing */
+    .price-card { padding: 28px 20px; }
+    .price-amount { font-size: 42px; }
+
+    /* Instructor */
+    .instructor-flex { flex-direction: column !important; text-align: center; gap: 24px !important; }
+    .instructor-flex > div:first-child { margin: 0 auto; }
+
+    /* Section titles */
+    .section-title { font-size: clamp(26px, 6vw, 38px); }
+
+    /* Form */
+    .form-card { padding: 24px 16px; border-radius: 20px; }
+    .form-row { grid-template-columns: 1fr; }
+    .form-submit { font-size: 15px; padding: 16px; }
+
+    /* FAQ */
+    .faq-q { font-size: 15px; }
+
+    /* Footer */
+    .footer-inner { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
+  }
+
+  /* ── SMALL MOBILE (max 360px) ── */
+  @media (max-width: 360px) {
+    .hero-title { font-size: 24px; }
+    .badge { font-size: 10px; padding: 6px 12px; }
+    .btn-primary, .btn-secondary { font-size: 14px; }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ────────── HERO ────────── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+
+  <!-- Animated Mandala Canvas -->
+  <canvas id="mandalaCanvas" style="position:absolute;inset:0;width:100%;height:100%;opacity:0.18;pointer-events:none;z-index:1;"></canvas>
+
+  <div class="hero-content">
+    <span class="badge">Register before 8 April 2026 &amp; Get 20% OFF!</span>
+    <h1 class="hero-title">This Summer, Create <span>Something Beautiful</span></h1>
+    <p class="hero-sub">Join our Mandala Art Summer Camp —<br>where focus meets creativity.</p>
+
+    <div class="hero-meta">
+      <span class="meta-pill">April – June 2026</span>
+      <span class="meta-pill">All Ages</span>
+      <span class="meta-pill">Maharajpur</span>
+    </div>
+
+    <div class="cta-group">
+      <a href="#register" class="btn-primary">Register Now — Free Trial</a>
+      <a href="https://wa.me/910000000000?text=Hi!%20I%20have%20a%20question%20about%20the%20Mandala%20Art%20Summer%20Camp%20at%20Deepti%20Art%20Class." target="_blank" class="btn-secondary">Have Questions?</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    Scroll
+    <div class="scroll-dot"></div>
+  </div>
+</section>
+
+<script>
+(function() {
+  const canvas = document.getElementById('mandalaCanvas');
+  const ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Mandala definitions
+  const mandalas = [
+    { x: 0.15, y: 0.25, r: 120, speed: 0.003, phase: 0,    petals: 8,  color: '#E8B84B' },
+    { x: 0.80, y: 0.20, r: 90,  speed: 0.005, phase: 1.2,  petals: 12, color: '#C2185B' },
+    { x: 0.50, y: 0.75, r: 150, speed: 0.002, phase: 0.5,  petals: 6,  color: '#FF6B6B' },
+    { x: 0.85, y: 0.70, r: 80,  speed: 0.006, phase: 2.1,  petals: 10, color: '#E8B84B' },
+    { x: 0.08, y: 0.75, r: 70,  speed: 0.004, phase: 3.0,  petals: 8,  color: '#FF4081' },
+    { x: 0.65, y: 0.45, r: 55,  speed: 0.007, phase: 1.8,  petals: 14, color: '#C2185B' },
+  ];
+
+  function drawMandala(cx, cy, radius, angle, petals, color) {
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.rotate(angle);
+
+    const layers = 4;
+    for (let l = 1; l <= layers; l++) {
+      const r = radius * (l / layers);
+      const alpha = 0.15 + (l / layers) * 0.4;
+      ctx.strokeStyle = color;
+      ctx.globalAlpha = alpha;
+      ctx.lineWidth = l === layers ? 1.5 : 0.8;
+
+      // Petal ring
+      for (let p = 0; p < petals; p++) {
+        const a = (p / petals) * Math.PI * 2;
+        ctx.beginPath();
+        ctx.save();
+        ctx.rotate(a);
+        ctx.ellipse(0, -r * 0.6, r * 0.18, r * 0.45, 0, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      // Circle ring
+      ctx.beginPath();
+      ctx.arc(0, 0, r, 0, Math.PI * 2);
+      ctx.globalAlpha = alpha * 0.5;
+      ctx.stroke();
+
+      // Dot ring
+      if (l % 2 === 0) {
+        for (let p = 0; p < petals * 2; p++) {
+          const a = (p / (petals * 2)) * Math.PI * 2;
+          const dx = Math.cos(a) * r;
+          const dy = Math.sin(a) * r;
+          ctx.beginPath();
+          ctx.arc(dx, dy, 2.5, 0, Math.PI * 2);
+          ctx.globalAlpha = alpha * 0.7;
+          ctx.fillStyle = color;
+          ctx.fill();
+        }
+      }
+    }
+
+    // Centre dot
+    ctx.beginPath();
+    ctx.arc(0, 0, 5, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.globalAlpha = 0.6;
+    ctx.fill();
+
+    ctx.restore();
+  }
+
+  let frame = 0;
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    frame++;
+    mandalas.forEach(m => {
+      const cx = m.x * canvas.width;
+      const cy = m.y * canvas.height;
+      const angle = m.phase + frame * m.speed;
+      drawMandala(cx, cy, m.r, angle, m.petals, m.color);
+    });
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+</script>
+
+<!-- ────────── STATS STRIP ────────── -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-num">500+</span>
+      <span class="stat-label">Happy Students</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">10+</span>
+      <span class="stat-label">Dance Styles</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">8</span>
+      <span class="stat-label">Weeks of Fun</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">5★</span>
+      <span class="stat-label">Parent Reviews</span>
+    </div>
+  </div>
+</div>
+
+<!-- ────────── ABOUT ────────── -->
+<section>
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="section-label">About the Camp</p>
+      <h2 class="section-title">What Makes This Camp <em>Special?</em></h2>
+      <p>Mandala art is more than drawing — it's focus, patience, and self-expression. Over 8 weeks, you'll go from basic patterns to stunning Colour and Zentangle Mandalas, guided every step of the way.</p>
+      <p>No experience needed. All ages welcome. Just show up and create.</p>
+      <p style="margin-top:28px;">
+        <a href="#register" class="btn-primary" style="font-size:15px; padding:14px 32px;">Start Your Free Trial</a>
+      </p>
+    </div>
+    <div class="about-visual">
+      <p class="visu-title">Art Types You'll Learn</p>
+      <div class="style-tags">
+        <span class="style-tag gold">Basic Mandala</span>
+        <span class="style-tag">Dot Mandala</span>
+        <span class="style-tag gold">Colour Mandala</span>
+        <span class="style-tag">Zentangle Mandala</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────────── GALLERY CAROUSEL ────────── -->
+<section class="gallery-section text-center">
+  <p class="section-label">What You'll Learn</p>
+  <h2 class="section-title">Learn How to Make <em>These Arts</em></h2>
+  <p class="gallery-sub">Every piece you see below was created by our students. Yours could be next.</p>
+
+  <div class="carousel-wrapper">
+    <button class="carousel-arrow arrow-left" onclick="moveCarousel(-1)">&#8592;</button>
+    <div class="carousel-track-wrap">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide"><div class="carousel-img-box"><img src="images/mandala-1.jpg" alt="Mandala Art 1"></div></div>
+        <div class="carousel-slide"><div class="carousel-img-box"><img src="images/mandala-2.jpg" alt="Mandala Art 2"></div></div>
+        <div class="carousel-slide"><div class="carousel-img-box"><img src="images/mandala-3.jpg" alt="Mandala Art 3"></div></div>
+        <div class="carousel-slide"><div class="carousel-img-box"><img src="images/mandala-4.jpg" alt="Mandala Art 4"></div></div>
+        <div class="carousel-slide"><div class="carousel-img-box"><img src="images/mandala-5.jpg" alt="Mandala Art 5"></div></div>
+        <div class="carousel-slide"><div class="carousel-img-box"><img src="images/mandala-6.jpg" alt="Mandala Art 6"></div></div>
+        <div class="carousel-slide"><div class="carousel-img-box"><img src="images/mandala-7.jpg" alt="Mandala Art 7"></div></div>
+        <div class="carousel-slide"><div class="carousel-img-box"><img src="images/mandala-8.jpg" alt="Mandala Art 8"></div></div>
+        <div class="carousel-slide"><div class="carousel-img-box"><img src="images/mandala-9.jpg" alt="Mandala Art 9"></div></div>
+        <div class="carousel-slide"><div class="carousel-img-box"><img src="images/mandala-10.jpg" alt="Mandala Art 10"></div></div>
+        <div class="carousel-slide"><div class="carousel-img-box"><img src="images/mandala-11.jpg" alt="Mandala Art 11"></div></div>
+        <div class="carousel-slide"><div class="carousel-img-box"><img src="images/mandala-12.jpg" alt="Mandala Art 12"></div></div>
+        <div class="carousel-slide"><div class="carousel-img-box"><img src="images/mandala-13.jpg" alt="Mandala Art 13"></div></div>
+      </div>
+    </div>
+    <button class="carousel-arrow arrow-right" onclick="moveCarousel(1)">&#8594;</button>
+  </div>
+
+  <div class="carousel-dots" id="carouselDots"></div>
+</section>
+
+<style>
+  .gallery-section { background: #f9f0ff; padding: 80px 0; }
+  .gallery-sub { font-size: 16px; color: #6b5280; margin: 12px auto 48px; max-width: 500px; padding: 0 20px; }
+
+  .carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    overflow: hidden;
+    padding: 20px 0 30px;
+  }
+
+  .carousel-track-wrap {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1100px;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    align-items: center;
+  }
+
+  .carousel-slide {
+    min-width: 28%;
+    padding: 0 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0.45;
+    transform: scale(0.78);
+    flex-shrink: 0;
+  }
+
+  .carousel-slide.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+    min-width: 36%;
+  }
+
+  .carousel-img-box {
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    background: var(--deep);
+    box-shadow: 0 10px 40px rgba(26,10,46,0.15);
+  }
+
+  .carousel-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .carousel-slide.active .carousel-img-box img:hover {
+    transform: scale(1.04);
+  }
+
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: var(--deep);
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .arrow-left { left: 16px; }
+  .arrow-right { right: 16px; }
+
+  .carousel-arrow:hover {
+    background: var(--gold);
+    color: var(--deep);
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .carousel-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(194,24,91,0.2);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .carousel-dot.active {
+    background: var(--magenta);
+    transform: scale(1.3);
+  }
+
+  @media (max-width: 768px) {
+    .carousel-slide { min-width: 60%; }
+    .arrow-left { left: 6px; }
+    .arrow-right { right: 6px; }
+    .carousel-arrow { width: 38px; height: 38px; font-size: 16px; }
+  }
+
+  @media (max-width: 480px) {
+    .carousel-slide { min-width: 75%; }
+  }
+</style>
+
+<script>
+  (function() {
+    const track = document.getElementById('carouselTrack');
+    const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+    const dotsWrap = document.getElementById('carouselDots');
+    const total = slides.length;
+    let current = 0;
+
+    // Build dots
+    slides.forEach((_, i) => {
+      const d = document.createElement('div');
+      d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      d.onclick = () => goTo(i);
+      dotsWrap.appendChild(d);
+    });
+
+    function goTo(index) {
+      current = (index + total) % total;
+
+      // Mark active (centre)
+      slides.forEach((s, i) => s.classList.toggle('active', i === current));
+      dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+
+      // Calculate offset so active slide is centred
+      const trackWrap = track.parentElement;
+      const wrapWidth = trackWrap.offsetWidth;
+      const activeSlide = slides[current];
+      const activeWidth = activeSlide.offsetWidth;
+
+      // Sum widths of all slides before current
+      let offset = 0;
+      for (let i = 0; i < current; i++) {
+        offset += slides[i].offsetWidth;
+      }
+      // Centre the active slide
+      offset -= (wrapWidth / 2) - (activeWidth / 2);
+      track.style.transform = `translateX(-${offset}px)`;
+    }
+
+    window.moveCarousel = function(dir) { goTo(current + dir); };
+
+    // Touch swipe support
+    let startX = 0;
+    track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    track.addEventListener('touchend', e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) moveCarousel(diff > 0 ? 1 : -1);
+    });
+
+    // Init after layout
+    setTimeout(() => goTo(0), 50);
+  })();
+</script>
+
+<!-- ────────── FEATURES ────────── -->
+<section style="background:#fff;" class="text-center">
+  <p class="section-label">Why Choose Us</p>
+  <h2 class="section-title">Why Choose Deepti <em>Art Class?</em></h2>
+  <div class="features-grid">
+    <div class="feat-box">
+      <div class="feat-title">4 Art Styles</div>
+      <div class="feat-desc">Basic, Dot, Colour & Zentangle Mandala — all under one roof, one camp.</div>
+    </div>
+    <div class="feat-box">
+      <div class="feat-title">Expert Instructor</div>
+      <div class="feat-desc">Learn from a passionate, trained artist who makes every stroke feel effortless.</div>
+    </div>
+    <div class="feat-box">
+      <div class="feat-title">All Ages Welcome</div>
+      <div class="feat-desc">From kids to adults, complete beginners to art lovers — everyone belongs here.</div>
+    </div>
+    <div class="feat-box">
+      <div class="feat-title">Convenient Location</div>
+      <div class="feat-desc">Our dedicated studio in Maharajpur, Jabalpur — easy to reach from anywhere in the city.</div>
+    </div>
+    <div class="feat-box">
+      <div class="feat-title">Flexible Timings</div>
+      <div class="feat-desc">Multiple batch slots available. Choose what works best for you at registration.</div>
+    </div>
+    <div class="feat-box">
+      <div class="feat-title">Free Demo Class</div>
+      <div class="feat-desc">Try your first Mandala class for free. No payment, no pressure.</div>
+    </div>
+    <div class="feat-box">
+      <div class="feat-title">Take Your Art Home</div>
+      <div class="feat-desc">Every piece you create is yours to keep — a portfolio of beautiful work by end of camp.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ────────── PRICING ────────── -->
+<section class="pricing-section text-center" id="pricing">
+  <p class="section-label">Pricing</p>
+  <h2 class="section-title">Simple, <em>Affordable Fees</em></h2>
+  <div style="max-width:420px; margin:40px auto 0;">
+    <div class="price-card featured" style="text-align:center;">
+      <div class="price-amount">₹700</div>
+      <p class="price-period">per student · one month</p>
+      <p style="margin-top:20px; font-size:15px; font-weight:600; color:var(--magenta);">Register before 8 April 2026 &amp; get 20% OFF!</p>
+      <a href="#register" class="price-cta" style="margin-top:24px; display:inline-block;">Book Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ────────── MEET YOUR INSTRUCTOR ────────── -->
+<section style="background:#fff; padding:80px 20px;">
+  <div class="instructor-flex" style="max-width:900px; margin:0 auto; display:flex; align-items:center; gap:60px; flex-wrap:wrap;">
+    <div style="flex-shrink:0; text-align:center;">
+      <div style="width:220px; height:220px; border-radius:50%; background:linear-gradient(135deg,var(--deep),var(--magenta)); display:flex; align-items:center; justify-content:center; margin:0 auto; border:4px solid var(--gold); box-shadow:0 0 0 8px rgba(232,184,75,0.12);">
+        <span style="font-size:80px; opacity:0.6;">&#128131;</span>
+      </div>
+    </div>
+    <div style="flex:1; min-width:260px;">
+      <p class="section-label">Meet Your Instructor</p>
+      <h2 class="section-title">Deepti</h2>
+      <p style="font-family:'Dancing Script',cursive; font-size:22px; color:var(--magenta); margin:8px 0 20px;">The Soul Behind Every Stroke</p>
+      <p style="font-size:16px; line-height:1.8; color:#4a3660;">Deepti doesn't just teach Mandala art — she makes you fall in love with it. With a deep passion for intricate patterns and a gift for breaking down complex designs into simple, joyful steps, she creates a classroom environment where every student feels seen, supported, and inspired. Her teaching style is calm, encouraging, and deeply personal — whether you're 7 or 70, she meets you exactly where you are. Under her guidance, students don't just learn to draw — they discover patience, mindfulness, and a creative confidence they carry far beyond the studio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ────────── TESTIMONIALS ────────── -->
+<section class="testimonials-section text-center">
+  <p class="section-label">Student Reviews</p>
+  <h2 class="section-title">What Our <em>Students Say</em></h2>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"My daughter had never touched a sketchbook before. After just 3 weeks at the Mandala Art Camp, she was creating the most beautiful patterns. Deepti Ma'am has a true gift for teaching!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">P</div>
+        <div>
+          <div class="testi-name">Priya Sharma</div>
+          <div class="testi-role">Parent · Jabalpur</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"I joined thinking it was just for kids — but the camp welcomed me so warmly. I'm 34 and I came home with a Colour Mandala I'm genuinely proud of. Already enrolled for the next batch!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">R</div>
+        <div>
+          <div class="testi-name">Rekha Joshi</div>
+          <div class="testi-role">Student · Vijay Nagar</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"The patience and attention Deepti Ma'am gives to every student is remarkable. My son became calmer and more focused after joining — and his Zentangle work is stunning. Highly recommend!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">A</div>
+        <div>
+          <div class="testi-name">Anil Malviya</div>
+          <div class="testi-role">Parent · Palasia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────────── REGISTER FORM ────────── -->
+<section class="register-section" id="register">
+  <div class="register-inner">
+    <p class="section-label">Register Now</p>
+    <h2 class="section-title">Claim Your <em style="color:var(--gold);">Free Trial Class</em></h2>
+    <p>Seats are limited this summer. Reserve your spot today — no payment needed for the trial!</p>
+
+    <div class="form-card">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Name</label>
+          <input id="f-name" type="text" placeholder="e.g. Priya Sharma">
+        </div>
+        <div class="form-group">
+          <label>Age</label>
+          <input id="f-age" type="number" placeholder="e.g. 14" min="1" max="99">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>WhatsApp Number</label>
+        <input id="f-phone" type="tel" placeholder="+91 98765 43210">
+      </div>
+      <div class="form-group">
+        <label>Which Art Style Interests You?</label>
+        <select id="f-style">
+          <option value="">-- Select a Style --</option>
+          <option>Basic Mandala</option>
+          <option>Dot Mandala</option>
+          <option>Colour Mandala</option>
+          <option>Zentangle Mandala</option>
+          <option>Not Sure / Mixed Batch</option>
+        </select>
+      </div>
+      <button class="form-submit" onclick="handleSubmit()">Book My Free Trial Class</button>
+      <p class="form-note">Your information is private &amp; secure. We'll call you within 24 hours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ────────── FAQ ────────── -->
+<section class="faq-section">
+  <div class="text-center" style="max-width:600px; margin:0 auto 48px;">
+    <h2 class="section-title">Questions? We've Got <em>Answers</em></h2>
+  </div>
+  <div class="faq-wrap">
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Is prior art experience necessary? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Not at all! Our Mandala Art Summer Camp is designed for complete beginners as well as those with some art background. Deepti Ma'am breaks down every pattern into simple, easy-to-follow steps — so even if you've never held a sketch pen before, you'll be creating beautiful Mandalas from day one.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">What age groups do you accept? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Everyone is welcome — from kids to adults, there is no age restriction. Whether you're 6 or 60, Mandala art is for you. We create a warm, comfortable environment where every student learns at their own pace.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Can siblings get a discount? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Yes! We offer a 10% sibling discount when two or more children from the same family enroll together. Contact us on WhatsApp for details.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">How do I pay? <span class="faq-icon">+</span></div>
+      <div class="faq-a">We accept cash, bank transfer, and UPI (PhonePe/GPay). Reach out to us on WhatsApp for any payment-related queries.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ────────── FOOTER ────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="f-logo">Deepti Art Class</div>
+      <p>Nurturing creativity through the art of Mandala. Where every stroke tells a story."</p>
+      <p style="margin-top:16px;">Maharajpur, Jabalpur, MP</p>
+      <p>+91 XXXXX XXXXX</p>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#register">Register</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact Us</h5>
+      <div style="display:flex; gap:16px; margin-top:8px; flex-wrap:wrap;">
+        <a href="https://wa.me/910000000000" target="_blank" title="WhatsApp" style="display:flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:50%; background:rgba(255,255,255,0.1); color:#fff; text-decoration:none; font-size:20px; transition:background 0.2s;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" title="Instagram" style="display:flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:50%; background:rgba(255,255,255,0.1); color:#fff; text-decoration:none; font-size:20px; transition:background 0.2s;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" title="Facebook" style="display:flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:50%; background:rgba(255,255,255,0.1); color:#fff; text-decoration:none; font-size:20px; transition:background 0.2s;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://maps.google.com" target="_blank" title="Google Maps" style="display:flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:50%; background:rgba(255,255,255,0.1); color:#fff; text-decoration:none; font-size:20px; transition:background 0.2s;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.102 0 4.977 3.125 4.977 7.023c0 5.472 7.023 16.977 7.023 16.977s7.023-11.505 7.023-16.977C19.023 3.125 15.898 0 12 0zm0 9.545a2.523 2.523 0 110-5.046 2.523 2.523 0 010 5.046z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 One Billion Deepti Dance Classes · All rights reserved.</span>
+    <span>Made with ❤️ for every dancer in Jabalpur</span>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar">
+  <div class="s-text">Summer Camp 2026 <span>· Free Trial</span></div>
+  <button class="s-btn" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">Register Now</button>
+</div>
+
+<script>
+  function toggleFaq(el) {
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) el.classList.add('open');
+  }
+
+  function handleSubmit() {
+    const name  = document.getElementById('f-name').value.trim();
+    const age   = document.getElementById('f-age').value.trim();
+    const phone = document.getElementById('f-phone').value.trim();
+    const style = document.getElementById('f-style').value;
+
+    if (!name) {
+      alert("Please enter your name.");
+      document.getElementById('f-name').focus();
+      return;
+    }
+    if (!age) {
+      alert("Please enter your age.");
+      document.getElementById('f-age').focus();
+      return;
+    }
+    if (!phone || phone.replace(/\D/g,'').length < 10) {
+      alert("Please enter a valid WhatsApp number.");
+      document.getElementById('f-phone').focus();
+      return;
+    }
+    if (!style) {
+      alert("Please select an art style you're interested in.");
+      document.getElementById('f-style').focus();
+      return;
+    }
+    alert(`🎨 Thank you, ${name}! We've received your registration.\nOur team will call you within 24 hours to confirm your FREE trial class.\n\nSee you at the studio!`);
+  }
+</script>
+</body>
+</html>
