@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You | Deepti Art Class</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #E8B84B;
+    --deep: #1A0A2E;
+    --magenta: #C2185B;
+    --coral: #FF6B6B;
+    --cream: #FFF8F0;
+    --text: #2D1B4E;
+    --accent: #FF4081;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: #fff;
+    border-radius: 28px;
+    padding: 60px 50px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(194,24,91,0.08);
+    border: 1px solid rgba(194,24,91,0.1);
+    animation: fadeUp 0.7s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── CHECK ICON ── */
+  .check-wrap {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--magenta), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 28px;
+    box-shadow: 0 10px 30px rgba(194,24,91,0.3);
+  }
+  .check-wrap svg { width: 36px; height: 36px; }
+
+  /* ── LOGO ── */
+  .logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    color: var(--magenta);
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  /* ── HEADLINE ── */
+  .headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 900;
+    color: var(--deep);
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .headline em {
+    font-style: italic;
+    color: var(--magenta);
+  }
+
+  .subtext {
+    font-size: 16px;
+    color: #6b5280;
+    line-height: 1.7;
+    margin-bottom: 44px;
+  }
+
+  /* ── STEPS ── */
+  .steps { text-align: left; margin-bottom: 44px; }
+  .steps-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--magenta);
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(194,24,91,0.08);
+  }
+  .step:last-child { border-bottom: none; }
+  .step-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--magenta), var(--accent));
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .step-body h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--deep);
+    margin-bottom: 4px;
+  }
+  .step-body p {
+    font-size: 14px;
+    color: #6b5280;
+    line-height: 1.6;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, var(--gold), var(--magenta));
+    border-radius: 2px;
+    margin: 0 auto 44px;
+  }
+
+  /* ── FOOTER NOTE ── */
+  .footer-note {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 32px;
+  }
+  .footer-note a {
+    color: var(--magenta);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .footer-note a:hover { text-decoration: underline; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 480px) {
+    .card { padding: 40px 24px; }
+    .headline { font-size: 28px; }
+    .subtext { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <span class="logo">Deepti Art Class</span>
+
+  <div class="check-wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+  </div>
+
+  <h1 class="headline">You're <em>Registered!</em></h1>
+  <p class="subtext">Thank you for signing up. Your free trial class is one step away — here's what happens next.</p>
+
+  <div class="divider"></div>
+
+  <div class="steps">
+    <p class="steps-title">What Happens Next</p>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h4>We'll Call You Within 24 Hours</h4>
+        <p>Our team will reach out on your WhatsApp number to confirm your free trial class slot.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h4>Attend Your Free Trial Class</h4>
+        <p>Come to One Billion Dance Studio, Maharajpur, Jabalpur at your confirmed time. No payment needed.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h4>Enroll & Start Dancing</h4>
+        <p>If you love the class, simply enroll for the camp at just ₹700/month and start your art journey!</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footer-note">Have a question? <a href="https://wa.me/910000000000?text=Hi!%20I%20just%20registered%20for%20the%20Dance%20Summer%20Camp%20and%20have%20a%20question." target="_blank">Chat with us on WhatsApp</a></p>
+
+</div>
+
+</body>
+</html>
