@@ -782,7 +782,7 @@
 
     <div class="cta-group">
       <a href="#register" class="btn-primary">Register Now — Free Trial</a>
-      <a href="https://wa.me/918305438627?text=Hi!%20I%20have%20a%20question%20about%20the%20Dance%20Summer%20Camp%20at%20Deepti%20Dance%20Academy." onclick="gtag('event',                        'whatsapp_click', {'event_category': 'Summer Camp', 'event_label': 'WhatsApp Chat'})"target="_blank" class="btn-secondary">Have Questions?</a>
+      <a href="https://wa.me/918305438627?text=Hi!%20I%20have%20a%20question%20about%20the%20Dance%20Summer%20Camp%20at%20Deepti%20Dance%20Academy." onclick="gtag('event',                        'whatsapp_click', {'event_category': 'Summer Camp', 'event_label': 'WhatsApp Chat', 'transport_type': 'beacon'})"target="_blank" class="btn-secondary">Have Questions?</a>
     </div>
   </div>
 
@@ -989,11 +989,7 @@
           <option>Not Sure / Mixed Batch</option>
         </select>
       </div>
-      <button class="form-submit" onclick="handleSubmit(  gtag('event', 'form_submission', {
-          'event_category': 'Summer Camp',
-          'event_label': 'Registration Form',
-          'transport_type': 'beacon'
-         });)">Book My Free Trial Class</button>
+      <button class="form-submit" onclick="handleSubmit(  gtag('event', 'form_submission', {'event_category': 'Summer Camp','event_label': 'Registration Form','transport_type': 'beacon'});)">Book My Free Trial Class</button>
       <p class="form-note">Your information is private &amp; secure. We'll call you within 24 hours.</p>
     </div>
   </div>
